@@ -40,8 +40,7 @@ public class SimpleVideoStream extends Activity implements
 
 		Bundle b = getIntent().getExtras();
 		mVideoUrl = b.getString("mediaUrl");
-		mShouldAutoClose = b.getBoolean("shouldAutoClose");
-		mShouldAutoClose = mShouldAutoClose == null ? true : mShouldAutoClose;
+		mShouldAutoClose = b.getBoolean("shouldAutoClose", true);
 
 		RelativeLayout relLayout = new RelativeLayout(this);
 		relLayout.setBackgroundColor(Color.BLACK);
